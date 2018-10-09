@@ -12,6 +12,12 @@ class Block{
     calculateHash(){
         return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();
     }
+
+    mineBlock(diffculty){
+        while(this.hash.substring(0,diffculty) !== Array(diffculty + 1).join("0")){
+            
+        }
+    }
 }
 
 class Blockchain{
